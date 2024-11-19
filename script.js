@@ -1,3 +1,5 @@
+const navDilag = document.getElementById("nav-dilag");
+
 function handleMenu() {
-  console.log("Hello");
+  navDilag.classList.toggle("hidden");
 }
