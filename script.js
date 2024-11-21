@@ -2,6 +2,7 @@ const navDilag = document.getElementById("nav-dilag");
 const line1 = document.getElementById("line1");
 const line2 = document.getElementById("line2");
 const line3 = document.getElementById("line3");
+const line4 = document.getElementById("line4");
 
 const initialTranslate_LTR = -96 * 4;
 const initialTranslate_RTL = 36 * 4;
@@ -40,3 +41,4 @@ function setUpIntersectionObserver(element, isLTR, speed) {
 setUpIntersectionObserver(line1, true, 0.15);
 setUpIntersectionObserver(line2, false, 0.15);
 setUpIntersectionObserver(line3, true, 0.15);
+setUpIntersectionObserver(line4, true, 0.5);

@@ -14,4 +14,17 @@
   h3 {
     @apply font-display;
   }
+  .div-cont {
+    @apply max-w-7xl  mx-auto px-6  md:px-8 md:py-14;
+  }
+
+  .heading-secondry {
+    @apply text-5xl md:font-semibold mb-4;
+  }
+  .g-border {
+    @apply rounded-2xl p-[1px] bg-gray-300 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200;
+  }
+  .g-box {
+    @apply p-8 rounded-2xl  gap-4 flex flex-col  items-center size-full bg-slate-100  hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50;
+  }
 }
