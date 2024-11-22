@@ -42,3 +42,15 @@ setUpIntersectionObserver(line1, true, 0.15);
 setUpIntersectionObserver(line2, false, 0.15);
 setUpIntersectionObserver(line3, true, 0.15);
 setUpIntersectionObserver(line4, true, 0.5);
+
+// Faqs
+const questions = document.getElementsByClassName("faq-q");
+const answers = document.getElementsByClassName("faq-a");
+const upIcons = document.getElementsByClassName("up");
+
+for (let i = 0; i < questions.length; i++) {
+  questions[i].addEventListener("click", () => {
+    answers[i].classList.toggle("hidden"); // Toggle the answer visibility
+    upIcons[i].classList.toggle("rotate-180"); // Rotate the icon
+  });
+}
