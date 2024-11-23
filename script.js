@@ -44,13 +44,16 @@ setUpIntersectionObserver(line3, true, 0.15);
 setUpIntersectionObserver(line4, true, 0.5);
 
 // Faqs
-const questions = document.getElementsByClassName("faq-q");
-const answers = document.getElementsByClassName("faq-a");
-const upIcons = document.getElementsByClassName("up");
+const dtElements = document.querySelectorAll("dt");
 
-for (let i = 0; i < questions.length; i++) {
-  questions[i].addEventListener("click", () => {
-    answers[i].classList.toggle("hidden"); // Toggle the answer visibility
-    upIcons[i].classList.toggle("rotate-180"); // Rotate the icon
+dtElements.forEach((element) => {
+  element.addEventListener("click", () => {
+    const ddid = element.getAttribute("aria-controls");
+    const dd = document.getElementById(ddid);
+
+    const upIcons = element.querySelector("i");
+
+    dd.classList.toggle("hidden");
+    upIcons.classList.toggle("rotate-180");
   });
-}
+});
